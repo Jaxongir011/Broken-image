@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100vh;
+    background: #012;
+    display: grid;
+    place-items: center;
+  }
+  .image {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+  }
+  .image span {
+    position: absolute;
+    background: url(https://picsum.photos/id/182/2896/1944) no-repeat center/cover;
+    inset: 0;
+    transition: 0.6s ease-in-out;
+  }
+  span:nth-child(1) {
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+    transition-delay: 0;
+  }
+  span:nth-child(2) {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+    transition-delay: 0.25s;
+  }
+  span:nth-child(3) {
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+    transition-delay: 0.5s;
+  }
+  span:nth-child(4) {
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transition-delay: 0.75s;
+  }
+  /* Hover Effects */
+  .image:hover span:nth-child(1) {
+    transform: translate(-40px, -60px) rotate(-15deg);
+  }
+  .image:hover span:nth-child(2) {
+    transform: translate(40px, -100px) rotate(25deg);
+  }
+  .image:hover span:nth-child(3) {
+    transform: translate(-40px, 80px) rotate(15deg);
+  }
+  .image:hover span:nth-child(4) {
+    transform: translate(40px, 80px) rotate(-15deg);
+  }
+  
